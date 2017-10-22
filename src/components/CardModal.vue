@@ -16,7 +16,7 @@
              <slot name="title" />
            </p>
            <button class="delete" aria-label="close"
-            @click="closeModal"></button>
+            @click="closeModal" v-if="!disable"></button>
          </header>
 
          <section class="modal-card-body">
