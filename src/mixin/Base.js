@@ -16,7 +16,7 @@ export default {
     },
   },
   data() {
-    return { show: this.showModal };
+    return {};
   },
   computed: {
     closable() {
@@ -27,7 +27,6 @@ export default {
     closeModal() {
       if (this.closable) {
         this.$emit('close');
-        this.show = false;
       }
     },
     beforeEnter() {
@@ -41,11 +40,6 @@ export default {
     },
     afterLeave() {
       this.$emit('close');
-    },
-  },
-  watch: {
-    showModal(value) {
-      this.show = value;
     },
   },
 };

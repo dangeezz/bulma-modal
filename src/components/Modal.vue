@@ -7,7 +7,7 @@
     @beforeLeave="beforeLeave"
     @afterLeave="afterLeave"
   >
-    <div class="modal is-active animated" v-show="show">
+    <div class="modal is-active animated" v-show="showModal">
       <div class="modal-background"@click="closeModal"></div>
       <!-- Modal content -->
       <div class="modal-content">

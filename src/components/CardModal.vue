@@ -7,7 +7,7 @@
     @beforeLeave="beforeLeave"
     @afterLeave="afterLeave"
   >
-    <div class="modal is-active animated" v-show="show">
+    <div class="modal is-active animated" v-show="showModal">
       <div class="modal-background" />
         <div class="modal-card">
          <header class="modal-card-head">
