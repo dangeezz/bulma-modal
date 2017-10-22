@@ -20,10 +20,10 @@
          </header>
 
          <section class="modal-card-body">
-            <template v-if="hasSlot">
+            <template v-if="hasDefaultSlot">
               <slot></slot>
             </template>
-           <template v-else-if="!hasSlot && body">
+           <template v-else-if="!hasDefaultSlot && body">
              <div v-html="body"></div>
            </template>
          </section>
@@ -56,8 +56,8 @@ export default {
   },
   mixins: [BaseMixin],
   computed: {
-    hasSlot() {
-      return !this.isEmpty(this.$slots);
+    hasDefaultSlot() {
+      return !(this.isEmpty(this.$slots)) && Boolean(this.$slots.default);
     },
   },
   methods: {
